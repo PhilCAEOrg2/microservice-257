@@ -118,11 +118,11 @@ public class ResTest {
 
   /**
    * 
-   * Test for the POSTtestbadrequest(missingbodyproperty)_ID794877 method.
+   * Test for the POSTtestbadrequestmissingbodyproperty_ID794877 method.
    * 
    */
   @Test
-  public void testPOSTtestbadrequest(missingbodyproperty)_ID794877() {
+  public void testPOSTtestbadrequestmissingbodyproperty_ID794877() {
     MiniClientCoverage c = new MiniClientCoverage(mainPath);
     c.setConnectorEndpoint(connector.getHttpEndpoint());
     
