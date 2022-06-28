@@ -116,6 +116,33 @@ public class ResTest {
   }
 
 
+  /**
+   * 
+   * Test for the POSTtestbadrequest(missingbodyproperty)_ID794877 method.
+   * 
+   */
+  @Test
+  public void testPOSTtestbadrequest(missingbodyproperty)_ID794877() {
+    MiniClientCoverage c = new MiniClientCoverage(mainPath);
+    c.setConnectorEndpoint(connector.getHttpEndpoint());
+    
+        
+    try {
+      c.setLogin(AnonymousAgentImpl.IDENTIFIER, "");
+      ClientResponse result = c.sendRequest("POST", "/test", """
+{}""", "application/json", "*/*", new HashMap<>(), new Object[0]);
+      System.out.println("Result of request with id: 828737: " + result.getResponse().trim());
+    
+      Assert.assertEquals("[914516]", 400, result.getHttpCode());
+
+    } catch (Exception e) {
+      e.printStackTrace();
+      fail("Exception: " + e);
+    }
+    
+
+    
+  }
 
 
 
